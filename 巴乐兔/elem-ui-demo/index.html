@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/vue/2.5.21/vue.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <title>elem-ui-demo</title>
+    <style>
+        .user {
+            color: blue;
+        }
+        .config {
+            color: rebeccapurple;
+        }
+        .actor {
+            color: aqua;
+        }
+        .task {
+            color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <el-tabs >
+            <el-tab-pane v-for="(tab, index) in tabs" :key="index" :label="tab.name" closable=true>
+                <div class="user">
+                    测试文字效果
+                </div>
+                <div class="config">
+                    测试文字效果
+                </div>
+            </el-tab-pane>
+        </el-tabs>
+
+        <div>
+            <button @click="addTab()">添加tab</button>
+        </div>
+    </div>
+</body>
+    <script>
+        new Vue({
+            el: '#app',
+            data: function() {
+                return {
+                    tabs: [
+                        {
+                            name: '用户管理'
+                        },
+                        {
+                            name:"nishishui"
+                        },
+                        {
+                            name:"nishishui"
+                        },
+                        {
+                            name:"nishishui"
+                        },
+                        {
+                            name:"nishishui"
+                        }
+                 
+                    ]
+                }
+            },
+            methods: {
+                addTab() {
+                    if ('工单是否相同') {
+
+                    } else {
+
+                    }
+                    var tab = {
+                        name: 'newTab',
+                        name: '1111',
+                        name: '222',
+                    }
+                    this.tabs.push(tab);
+                }
+            }
+        })
+    </script>
+</html>
